@@ -34,22 +34,21 @@ class WelcomePage extends StatelessWidget {
                 const SizedBox(
                   height: 80,
                 ),
-                InkWell(
-                  splashColor: Colors.black,
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => HomePage(),
-                        ));
-                  },
-                  child: Ink(
+                Material(
+                  color: const Color(0xFFE57734),
+                  borderRadius: BorderRadius.circular(10),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ));
+                    },
                     child: Container(
                       padding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 30),
-                      decoration: BoxDecoration(
-                          color: const Color(0xFFE57734),
-                          borderRadius: BorderRadius.circular(12)),
                       child: const Text(
                         "Get Started",
                         style: TextStyle(
