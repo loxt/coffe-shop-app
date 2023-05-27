@@ -1,3 +1,4 @@
+import 'package:coffe_shop_app/widgets/home_bottom_bar.dart';
 import 'package:coffe_shop_app/widgets/item.dart';
 import 'package:flutter/material.dart';
 
@@ -107,17 +108,17 @@ class _HomePageState extends State<HomePage>
                     insets: EdgeInsets.symmetric(horizontal: 16)),
                 isScrollable: true,
                 controller: _tabController,
-                tabs: [
-                  const Tab(
+                tabs: const [
+                  Tab(
                     text: "Hot Coffee",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Cold Coffee",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Cappuccino",
                   ),
-                  const Tab(
+                  Tab(
                     text: "Americano",
                   ),
                 ],
@@ -137,6 +138,7 @@ class _HomePageState extends State<HomePage>
           ),
         ),
       ),
+      bottomNavigationBar: HomeBottomBar(),
     );
   }
 }
